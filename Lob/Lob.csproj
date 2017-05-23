@@ -44,9 +44,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Data\Address.cs" />
+    <Compile Include="Data\Letter.cs" />
+    <Compile Include="Data\Thumbnail.cs" />
     <Compile Include="Data\USAddress.cs" />
     <Compile Include="Data\USVerification.cs" />
     <Compile Include="Interfaces\IApiService.cs" />
+    <Compile Include="Interfaces\ILettersService.cs" />
     <Compile Include="Interfaces\IUSVerificationService.cs" />
     <Compile Include="Lob.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -55,6 +59,8 @@
     <Compile Include="Requests\Request.cs" />
     <Compile Include="Routes\ApiRoutes.cs" />
     <Compile Include="Services\ApiService.cs" />
+    <Compile Include="Services\LettersService.cs" />
+    <Compile Include="Services\Service.cs" />
     <Compile Include="Services\USVerificationService.cs" />
   </ItemGroup>
   <ItemGroup>

@@ -10,17 +10,13 @@ using System.Threading.Tasks;
 
 namespace Lob.Services
 {
-    public class USVerificationService : IUSVerificationService
+    public class USVerificationService : Service, IUSVerificationService
     {
-        private IApiService ApiService { get; set; }
-
-        public USVerificationService(string apiKey) 
-            : this(new ApiService(apiKey)) { }
+        public USVerificationService(string apiKey)
+            : base(apiKey) { }
 
         public USVerificationService(IApiService apiService)
-        {
-            ApiService = apiService;
-        }
+            : base(apiService) { }
 
         public USVerification Verify(USAddress address)
         {

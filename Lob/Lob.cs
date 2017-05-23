@@ -18,7 +18,9 @@ namespace Lob
         }
 
         /// <summary>
-        /// Verify a domestic address. Only requests with live API keys will use valid CASS data to generate a response. Properly formatted requests with test API keys will return the generic dummy response on the right, regardless of inputs.
+        /// Verify a domestic address. 
+        /// Only requests with live API keys will use valid CASS data to generate a response. 
+        /// Properly formatted requests with test API keys will return the generic dummy response on the right, regardless of inputs.
         /// </summary>
         /// <param name="address"></param>
         /// <returns></returns>

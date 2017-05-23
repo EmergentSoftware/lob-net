@@ -15,5 +15,10 @@ namespace Lob.Routes
             public const string US = BaseUrl + "/us_verifications";
             public const string Intl = BaseUrl + "/intl_verifications";
         }
+
+        public static class Letters
+        {
+            public const string Create = BaseUrl + "/letters";
+        }
     }
 }
