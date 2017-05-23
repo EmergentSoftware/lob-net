@@ -1,4 +1,5 @@
-﻿using Lob.Interfaces;
+﻿using Lob.Data;
+using Lob.Interfaces;
 using Lob.Routes;
 using Newtonsoft.Json;
 using System;
@@ -21,20 +22,10 @@ namespace Lob.Services
             ApiService = apiService;
         }
 
-        public Verification Verify(Address address)
+        public USVerification Verify(USAddress address)
         {
             string url = ApiRoutes.Verifications.US;
-            return ApiService.Post<Verification>(url, address.ToJson());
+            return ApiService.Post<USVerification>(url, address.Serialize());
         }
-    }
-
-    public interface IUSVerificationService
-    {
-
-    }
-
-    public class Verification
-    {
-
     }
 }

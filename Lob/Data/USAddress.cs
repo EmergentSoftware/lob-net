@@ -12,7 +12,7 @@ namespace Lob.Data
     /// The intended recipient, typically a person's or firm's name.
     /// 
     /// </summary>
-    public class Address
+    public class USAddress
     {
         /// <summary>
         /// optional
@@ -60,5 +60,12 @@ namespace Lob.Data
         /// </summary>
         [JsonProperty(PropertyName = "state")]
         public string State { get; set; }
+
+        public string Serialize()
+        {
+            string json = JsonConvert.SerializeObject(this, Formatting.None, new JsonSerializerSettings { NullValueHandling = NullValueHandling.Ignore });
+
+            return json;
+        }
     }
 }

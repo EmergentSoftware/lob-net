@@ -11,6 +11,9 @@ namespace Lob.Requests
     {
         public string Data { get; set; }
 
-        public PostRequest() : base() { }
+        public PostRequest() : base()
+        {
+            Method = "POST";
+        }
     }
 }
