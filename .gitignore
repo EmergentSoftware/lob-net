@@ -288,4 +288,4 @@ __pycache__/
 *.xsd.cs
 
 # Ensure api key is not added to source control
-Lob.Tests/App.config
+*App.config
