@@ -20,7 +20,7 @@ namespace Lob.Services
         public Letter Create(Letter letter)
         {
             string url = ApiRoutes.Letters.Create;
-            return ApiService.Post<USVerification>(url, letter.Serialize());
+            return ApiService.Post<Letter>(url, letter.Serialize());
         }
     }
 }

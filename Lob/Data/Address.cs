@@ -10,7 +10,7 @@ namespace Lob.Data
     /// <summary>
     /// 
     /// </summary>
-    public class Address
+    public class Address : Data
     {
         [JsonProperty(PropertyName = "id")]
         public string Id { get; set; }
@@ -59,5 +59,8 @@ namespace Lob.Data
 
         [JsonProperty(PropertyName = "object")]
         public string Object { get; set; }
+
+        [JsonProperty(PropertyName = "deleted")]
+        public bool Deleted { get; set; }
     }
 }

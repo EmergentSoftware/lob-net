@@ -32,5 +32,10 @@ namespace Lob
 
             return verification;
         }
+
+        public Letter Create(Letter letter)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

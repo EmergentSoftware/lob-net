@@ -1,4 +1,5 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
+﻿using Lob.Data;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -13,12 +14,13 @@ namespace Lob.Tests
         [TestMethod]
         public void CreateValidLetter()
         {
-            var letter = new Letter
-            {
+            Letter createdLetter = Lob.Create(Letter);
+        }
 
-            };
-
-            Letter createdLetter = Lob.Create(letter);
+        [TestMethod]
+        public void SerializeLetter()
+        {
+            string json = Letter.Serialize();
         }
     }
 }

@@ -44,7 +44,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Converters\AddressJsonConverter.cs" />
+    <Compile Include="Converters\LetterJsonConverter.cs" />
     <Compile Include="Data\Address.cs" />
+    <Compile Include="Data\Data.cs" />
     <Compile Include="Data\Letter.cs" />
     <Compile Include="Data\Thumbnail.cs" />
     <Compile Include="Data\USAddress.cs" />

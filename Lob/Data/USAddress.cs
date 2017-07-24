@@ -11,7 +11,7 @@ namespace Lob.Data
     /// Verify a domestic address.
     /// The intended recipient, typically a person's or firm's name.
     /// </summary>
-    public class USAddress
+    public class USAddress : Data
     {
         /// <summary>
         /// (Optional)
@@ -59,12 +59,5 @@ namespace Lob.Data
         /// </summary>
         [JsonProperty(PropertyName = "state")]
         public string State { get; set; }
-
-        public string Serialize()
-        {
-            string json = JsonConvert.SerializeObject(this, Formatting.None, new JsonSerializerSettings { NullValueHandling = NullValueHandling.Ignore });
-
-            return json;
-        }
     }
 }
