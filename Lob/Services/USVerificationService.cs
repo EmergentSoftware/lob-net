@@ -1,12 +1,5 @@
 ﻿using Lob.Data;
 using Lob.Interfaces;
-using Lob.Routes;
-using Newtonsoft.Json;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Lob.Services
 {
@@ -20,7 +13,7 @@ namespace Lob.Services
 
         public USVerification Verify(USAddress address)
         {
-            string url = ApiRoutes.Verifications.US;
+            string url = Routes.Verifications.US;
             return ApiService.Post<USVerification>(url, address.Serialize());
         }
     }

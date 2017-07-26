@@ -44,14 +44,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Converters\AddressJsonConverter.cs" />
-    <Compile Include="Converters\LetterJsonConverter.cs" />
-    <Compile Include="Data\Address.cs" />
-    <Compile Include="Data\Data.cs" />
-    <Compile Include="Data\Letter.cs" />
-    <Compile Include="Data\Thumbnail.cs" />
-    <Compile Include="Data\USAddress.cs" />
-    <Compile Include="Data\USVerification.cs" />
+    <Compile Include="Actions\Action.cs" />
+    <Compile Include="Actions\Create.cs" />
+    <Compile Include="Actions\Retrieve.cs" />
+    <Compile Include="Actions\Verify.cs" />
+    <Compile Include="Models\Address.cs" />
+    <Compile Include="Models\Data.cs" />
+    <Compile Include="Models\Letter.cs" />
+    <Compile Include="Models\Thumbnail.cs" />
+    <Compile Include="Models\USAddress.cs" />
+    <Compile Include="Models\USVerification.cs" />
     <Compile Include="Interfaces\IApiService.cs" />
     <Compile Include="Interfaces\ILettersService.cs" />
     <Compile Include="Interfaces\IUSVerificationService.cs" />
@@ -60,7 +62,7 @@
     <Compile Include="Requests\GetRequest.cs" />
     <Compile Include="Requests\PostRequest.cs" />
     <Compile Include="Requests\Request.cs" />
-    <Compile Include="Routes\ApiRoutes.cs" />
+    <Compile Include="Routes.cs" />
     <Compile Include="Services\ApiService.cs" />
     <Compile Include="Services\LettersService.cs" />
     <Compile Include="Services\Service.cs" />

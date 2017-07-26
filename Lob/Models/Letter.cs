@@ -1,16 +1,6 @@
-﻿using Lob.Converters;
-using Lob.Data;
-using Newtonsoft.Json;
-using Newtonsoft.Json.Converters;
-using Newtonsoft.Json.Linq;
+﻿using Newtonsoft.Json;
 using Newtonsoft.Json.Serialization;
 using System;
-using System.Collections.Generic;
-using System.Data;
-using System.Linq;
-using System.Reflection;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Lob.Data
 {
@@ -33,6 +23,9 @@ namespace Lob.Data
 
         [JsonProperty(PropertyName = "color")]
         public bool Color { get; set; }
+
+        [JsonProperty(PropertyName = "file")]
+        public string File { get; set; }
 
         [JsonProperty(PropertyName = "double_sided")]
         public bool DoubleSided { get; set; }
@@ -74,22 +67,15 @@ namespace Lob.Data
         public string ExpectedDeliveryDate { get; set; }
 
         [JsonProperty(PropertyName = "date_created")]
-        public DateTime DateCreated { get; set; }
+        public DateTime? DateCreated { get; set; }
 
         [JsonProperty(PropertyName = "date_modified")]
-        public DateTime DateModified { get; set; }
+        public DateTime? DateModified { get; set; }
 
         [JsonProperty(PropertyName = "send_date")]
-        public DateTime SendDate { get; set; }
+        public DateTime? SendDate { get; set; }
 
         [JsonProperty(PropertyName = "object")]
         public string Object { get; set; }
-
-        public override string Serialize()
-        {
-            string json = JsonConvert.SerializeObject(this, Formatting.Indented, new LetterJsonConverter(typeof(Letter)));
-
-            return json;
-        }
     }
 }

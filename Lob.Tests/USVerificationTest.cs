@@ -1,6 +1,4 @@
-﻿using System;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
-using Lob.Services;
+﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Lob.Data;
 
 namespace Lob.Tests
@@ -19,7 +17,7 @@ namespace Lob.Tests
                 ZipCode = "94107"
             };
 
-            USVerification verification = Lob.Verify(address);
+            USVerification verification = Lob.Verify.USAddress(address);
         }
     }
 }

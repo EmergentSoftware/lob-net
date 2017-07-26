@@ -1,15 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Lob.Requests
+﻿namespace Lob.Requests
 {
-    public class GetRequest
+    public class GetRequest : Request
     {
-        public List<KeyValuePair<string, string>> Args { get; set; }
-
-        public GetRequest() : base() { }
+        public GetRequest() : 
+            base()
+        {
+            Method = "GET";
+        }
     }
 }

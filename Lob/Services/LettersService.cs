@@ -1,11 +1,5 @@
 ﻿using Lob.Data;
 using Lob.Interfaces;
-using Lob.Routes;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Lob.Services
 {
@@ -19,8 +13,14 @@ namespace Lob.Services
 
         public Letter Create(Letter letter)
         {
-            string url = ApiRoutes.Letters.Create;
+            string url = Routes.Letters.Create;
             return ApiService.Post<Letter>(url, letter.Serialize());
+        }
+
+        public Letter Retrieve(string id)
+        {
+            string url = Routes.Letters.Retrieve(id);
+            return ApiService.Get<Letter>(url);
         }
     }
 }

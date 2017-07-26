@@ -52,15 +52,15 @@ namespace Lob.Data
         public object Metadata { get; set; }
 
         [JsonProperty(PropertyName = "date_created")]
-        public DateTime DateCreated { get; set; }
+        public DateTime? DateCreated { get; set; }
 
         [JsonProperty(PropertyName = "date_modified")]
-        public DateTime DateModified { get; set; }
+        public DateTime? DateModified { get; set; }
 
         [JsonProperty(PropertyName = "object")]
         public string Object { get; set; }
 
         [JsonProperty(PropertyName = "deleted")]
-        public bool Deleted { get; set; }
+        public bool? Deleted { get; set; }
     }
 }

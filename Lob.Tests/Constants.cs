@@ -1,14 +1,14 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Configuration;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Configuration;
 
 namespace Lob.Tests
 {
-    public static class Constants
+    public class Constants
     {
         public static readonly string ApiKey = ConfigurationManager.AppSettings["ApiKey"];
+
+        public class Letter
+        {
+            public const string Id = "ltr_4868c3b754655f90";
+        }
     }
 }

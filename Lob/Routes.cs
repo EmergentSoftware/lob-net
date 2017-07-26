@@ -1,24 +1,19 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Lob.Routes
+﻿namespace Lob
 {
-    public static class ApiRoutes
+    public static class Routes
     {
         private const string BaseUrl = "https://api.lob.com/v1";
 
-        public static class Verifications
+        public class Verifications
         {
             public const string US = BaseUrl + "/us_verifications";
             public const string Intl = BaseUrl + "/intl_verifications";
         }
 
-        public static class Letters
+        public class Letters
         {
             public const string Create = BaseUrl + "/letters";
+            public static string Retrieve(string id) => $"{BaseUrl}/letters/{id}";
         }
     }
 }
