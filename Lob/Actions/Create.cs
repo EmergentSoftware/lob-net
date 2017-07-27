@@ -1,4 +1,4 @@
-﻿using Lob.Data;
+﻿using Lob.Models;
 using Lob.Services;
 
 namespace Lob.Actions
@@ -18,6 +18,18 @@ namespace Lob.Actions
             var service = new LettersService(ApiKey);
             var createdLetter = service.Create(letter);
             return createdLetter;
+        }
+
+        /// <summary>
+        /// Create a new postcard
+        /// </summary>
+        /// <param name="letter">Letter to create</param>
+        /// <returns></returns>
+        public Postcard Postcard(Postcard postcard)
+        {
+            var service = new PostcardService(ApiKey);
+            var createdPostcard = service.Create(postcard);
+            return createdPostcard;
         }
     }
 }

@@ -22,7 +22,7 @@ Letters
 ##### Create a new letter
 ```csharp
 var Lob = new Lob('<api-key-here>');
-Letter = new Letter
+var letter = new Letter
 {
     Description = "Demo Letter",
     To = Address,
@@ -40,7 +40,7 @@ Letter = new Letter
     TrackingEvents = null,
     SendDate = DateTime.Now.AddDays(1),
 };
-Letter createdLetter = Lob.Create.Letter(Letter);
+Letter createdLetter = Lob.Create.Letter(letter);
 ```
 
 ##### Retrieve a letter
@@ -64,4 +64,34 @@ Returns a list of letters. The letters are returned sorted by creation date, wit
 ```csharp
 var Lob = new Lob('<api-key-here>');
 LetterList letters = Lob.List.Letters(limit: 2, offset: 0);
+```
+
+Postcards
+-----------
+##### Create a postcard
+```csharp
+var Lob = new Lob('<api-key-here>');
+var address = new Address
+{
+    Description = null,
+    Name = "Harry Zhang",
+    Phone = null,
+    Email = null,
+    Company = null,
+    AddressLine1 = "123 Test Street",
+    AddressLine2 = null,
+    AddressCity = "Mountain View",
+    AddressState = "CA",
+    AddressZip = "94041",
+    AddressCountry = "US",
+};
+var postcard = new Postcard
+{
+    Description = "Demo Postcard job",
+    To = address,
+    From = address,
+    Front = "<html style='padding: 1in; font-size: 50;'>Front HTML for {{name}}</html>",
+    Back = "<html style='padding: 1in; font-size: 50;'>Back HTML for {{name}}</html>"
+};
+Postcard postcard = Lob.Create.Postcard(postcard);
 ```

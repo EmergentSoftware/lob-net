@@ -1,6 +1,6 @@
 ﻿using Newtonsoft.Json;
 
-namespace Lob.Data
+namespace Lob.Models
 {
     public class Data
     {

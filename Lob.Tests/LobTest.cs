@@ -1,6 +1,7 @@
-﻿using Lob.Data;
+﻿using Lob.Models;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
+using System.Collections.Generic;
 
 namespace Lob.Tests
 {
@@ -10,6 +11,7 @@ namespace Lob.Tests
         public Lob Lob { get; set; }
         public Letter Letter { get; set; }
         public Address Address { get; set; }
+        public Postcard Postcard { get; set; }
 
         public LobTest()
         {
@@ -47,6 +49,15 @@ namespace Lob.Tests
                 TrackingNumber = null,
                 TrackingEvents = null,
                 SendDate = DateTime.Now.AddDays(1),
+            };
+
+            Postcard = new Postcard
+            {
+                Description = "Demo Postcard job",
+                To = Address,
+                From = Address,
+                Front = "<html style='padding: 1in; font-size: 50;'>Front HTML for {{name}}</html>",
+                Back = "<html style='padding: 1in; font-size: 50;'>Back HTML for {{name}}</html>"
             };
         }
     }

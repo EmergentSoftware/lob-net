@@ -1,5 +1,5 @@
-﻿using Lob.Data;
-using Lob.Interfaces;
+﻿using Lob.Interfaces;
+using Lob.Models;
 
 namespace Lob.Services
 {

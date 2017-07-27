@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Lob.Data
+namespace Lob.Models
 {
     /// <summary>
     /// Verify a domestic address.

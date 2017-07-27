@@ -50,11 +50,13 @@
     <Compile Include="Actions\List.cs" />
     <Compile Include="Actions\Retrieve.cs" />
     <Compile Include="Actions\Verify.cs" />
+    <Compile Include="Interfaces\IPostcardService.cs" />
     <Compile Include="Models\Address.cs" />
     <Compile Include="Models\Data.cs" />
     <Compile Include="Models\Letter.cs" />
     <Compile Include="Models\LetterCancellation.cs" />
     <Compile Include="Models\LetterList.cs" />
+    <Compile Include="Models\Postcard.cs" />
     <Compile Include="Models\Thumbnail.cs" />
     <Compile Include="Models\USAddress.cs" />
     <Compile Include="Models\USVerification.cs" />
@@ -70,6 +72,7 @@
     <Compile Include="Routes.cs" />
     <Compile Include="Services\ApiService.cs" />
     <Compile Include="Services\LettersService.cs" />
+    <Compile Include="Services\PostcardService.cs" />
     <Compile Include="Services\Service.cs" />
     <Compile Include="Services\USVerificationService.cs" />
   </ItemGroup>

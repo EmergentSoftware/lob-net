@@ -1,6 +1,5 @@
-﻿using Lob.Data;
+﻿using Lob.Models;
 using Lob.Services;
-using System;
 
 namespace Lob.Actions
 {

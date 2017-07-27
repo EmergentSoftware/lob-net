@@ -1,5 +1,4 @@
-﻿using Lob.Data;
-using Lob.Models;
+﻿using Lob.Models;
 
 namespace Lob.Interfaces
 {

@@ -1,5 +1,5 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using Lob.Data;
+using Lob.Models;
 
 namespace Lob.Tests
 {

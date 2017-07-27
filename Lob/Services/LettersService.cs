@@ -1,7 +1,5 @@
-﻿using Lob.Data;
-using Lob.Interfaces;
+﻿using Lob.Interfaces;
 using Lob.Models;
-using System.Collections.Generic;
 
 namespace Lob.Services
 {

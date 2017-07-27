@@ -1,4 +1,4 @@
-﻿using Lob.Data;
+﻿using Lob.Models;
 using Lob.Services;
 
 namespace Lob.Actions
