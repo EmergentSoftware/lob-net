@@ -11,7 +11,7 @@ namespace Lob.Actions
         /// <summary>
         /// Create a new letter
         /// </summary>
-        /// <param name="letter"></param>
+        /// <param name="letter">Letter to create</param>
         /// <returns></returns>
         public Letter Letter(Letter letter)
         {

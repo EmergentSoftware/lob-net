@@ -1,5 +1,7 @@
 ﻿using Lob.Data;
+using Lob.Models;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using System.Collections.Generic;
 
 namespace Lob.Tests
 {
@@ -16,6 +18,18 @@ namespace Lob.Tests
         public void RetrieveLetter()
         {
             Letter letter = Lob.Retrieve.Letter(Constants.Letter.Id);
+        }
+
+        [TestMethod]
+        public void CancelLetter()
+        {
+            LetterCancellation cancellation = Lob.Cancel.Letter(Constants.Letter.Id);
+        }
+
+        [TestMethod]
+        public void ListLetters()
+        {
+            LetterList letters = Lob.List.Letters(limit: 2, offset: 0);
         }
     }
 }

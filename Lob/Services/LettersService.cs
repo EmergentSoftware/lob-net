@@ -1,5 +1,7 @@
 ﻿using Lob.Data;
 using Lob.Interfaces;
+using Lob.Models;
+using System.Collections.Generic;
 
 namespace Lob.Services
 {
@@ -21,6 +23,18 @@ namespace Lob.Services
         {
             string url = Routes.Letters.Retrieve(id);
             return ApiService.Get<Letter>(url);
+        }
+
+        public LetterCancellation Cancel(string id)
+        {
+            string url = Routes.Letters.Cancel(id);
+            return ApiService.Delete<LetterCancellation>(url);
+        }
+
+        public LetterList List(int limit, int offset)
+        {
+            string url = Routes.Letters.List(limit, offset);
+            return ApiService.Get<LetterList>(url);
         }
     }
 }

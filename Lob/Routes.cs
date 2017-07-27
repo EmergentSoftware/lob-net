@@ -14,6 +14,8 @@
         {
             public const string Create = BaseUrl + "/letters";
             public static string Retrieve(string id) => $"{BaseUrl}/letters/{id}";
+            public static string Cancel(string id) => $"{BaseUrl}/letters/{id}";
+            public static string List(int limit, int offset) => $"{BaseUrl}/letters?limit={limit}&offset={offset}";
         }
     }
 }

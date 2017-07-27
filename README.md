@@ -2,7 +2,7 @@ US Verifications
 -----------
 
 
-Verify a US address.
+##### Verify a US address.
 ```csharp
 var Lob = new Lob('<api-key-here>');
 var address = new USAddress
@@ -19,7 +19,7 @@ Letters
 -----------
 
 
-Create a new letter.
+##### Create a new letter
 ```csharp
 var Lob = new Lob('<api-key-here>');
 Letter = new Letter
@@ -43,10 +43,25 @@ Letter = new Letter
 Letter createdLetter = Lob.Create.Letter(Letter);
 ```
 
-Retrieve a letter.
+##### Retrieve a letter
 Retrieves the letter with a given ID. You need only supply the unique letter ID that was returned upon letter creation.
 ```csharp
 var Lob = new Lob('<api-key-here>');
 var id = "ltr_4868c3b754655f90";
 Letter letter = Lob.Retrieve.Letter(id);
+```
+
+##### Cancel a letter
+Completely removes a letter from production. This can only be done if the letter send_date has not yet passed.
+```csharp
+var Lob = new Lob('<api-key-here>');
+var id = "ltr_4868c3b754655f90";
+Letter letter = Lob.Cancel.Letter(id);
+```
+
+##### List all letters
+Returns a list of letters. The letters are returned sorted by creation date, with the most recently created letters appearing first.
+```csharp
+var Lob = new Lob('<api-key-here>');
+LetterList letters = Lob.List.Letters(limit: 2, offset: 0);
 ```

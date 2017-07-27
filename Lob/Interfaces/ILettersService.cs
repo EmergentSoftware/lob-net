@@ -1,13 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Lob.Data;
+using Lob.Models;
 
 namespace Lob.Interfaces
 {
     public interface ILettersService
     {
-
+        Letter Create(Letter letter);
+        Letter Retrieve(string id);
+        LetterCancellation Cancel(string id);
     }
 }

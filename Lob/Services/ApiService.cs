@@ -34,6 +34,49 @@ namespace Lob.Services
             });
         }
 
+        public TResponse Delete<TResponse>(string url)
+        {
+            return Delete<TResponse>(new DeleteRequest
+            {
+                Url = url
+            });
+        }
+
+        private TResponse Delete<TResponse>(DeleteRequest request)
+        {
+            WebRequest webRequest = WebRequest.Create(request.Url);
+            webRequest.Method = request.Method;
+            webRequest.ContentType = request.ContentType;
+            webRequest.Credentials = CredentialCache.DefaultNetworkCredentials;
+            webRequest.Headers.Add("Authorization", GetAuthHeader());
+
+            string content = "";
+            HttpWebResponse authResponse = null;
+
+            try
+            {
+                authResponse = (HttpWebResponse)webRequest.GetResponse();
+            }
+            catch (WebException ex)
+            {
+                using (var reader = new StreamReader(ex.Response.GetResponseStream(), Encoding.UTF8))
+                {
+                    content = reader.ReadToEnd();
+                }
+
+                throw new Exception(content, ex);
+            }
+
+            using (var reader = new StreamReader(authResponse.GetResponseStream(), Encoding.UTF8))
+            {
+                content = reader.ReadToEnd();
+            }
+
+            TResponse response = JsonConvert.DeserializeObject<TResponse>(content);
+
+            return response;
+        }
+
         private TResponse Get<TResponse>(GetRequest request)
         {
             WebRequest webRequest = WebRequest.Create(request.Url);
