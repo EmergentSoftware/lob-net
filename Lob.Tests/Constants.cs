@@ -15,5 +15,10 @@ namespace Lob.Tests
         {
             public const string Id = "psc_5c002b86ce47537a";
         }
+
+        public class Address
+        {
+            public const string Id = "adr_fa85158b26c3eb7c";
+        }
     }
 }

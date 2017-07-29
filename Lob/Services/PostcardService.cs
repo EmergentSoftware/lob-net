@@ -3,7 +3,7 @@ using Lob.Models;
 
 namespace Lob.Services
 {
-    public class PostcardService : Service, IModelService<Postcard>
+    public class PostcardService : Service, IModelService<Postcard>, ICancelService
     {
         public PostcardService(string apiKey)
             : base(apiKey) { }

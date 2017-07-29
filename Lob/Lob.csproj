@@ -47,12 +47,16 @@
     <Compile Include="Actions\Action.cs" />
     <Compile Include="Actions\Cancel.cs" />
     <Compile Include="Actions\Create.cs" />
+    <Compile Include="Actions\Delete.cs" />
     <Compile Include="Actions\List.cs" />
     <Compile Include="Actions\Retrieve.cs" />
     <Compile Include="Actions\Verify.cs" />
+    <Compile Include="Interfaces\ICancelService.cs" />
+    <Compile Include="Interfaces\IDeleteService.cs" />
     <Compile Include="Interfaces\IPostcardService.cs" />
     <Compile Include="Models\Address.cs" />
     <Compile Include="Models\Data.cs" />
+    <Compile Include="Models\Deletion.cs" />
     <Compile Include="Models\Letter.cs" />
     <Compile Include="Models\Cancellation.cs" />
     <Compile Include="Models\LetterList.cs" />
@@ -70,6 +74,7 @@
     <Compile Include="Requests\PostRequest.cs" />
     <Compile Include="Requests\Request.cs" />
     <Compile Include="Routes.cs" />
+    <Compile Include="Services\AddressService.cs" />
     <Compile Include="Services\ApiService.cs" />
     <Compile Include="Services\LetterService.cs" />
     <Compile Include="Services\PostcardService.cs" />

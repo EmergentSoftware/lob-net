@@ -117,4 +117,50 @@ Returns a list of postcards. The returned postcards are sorted by creation date,
 ```csharp
 var Lob = new Lob('<api-key-here>');
 ModelList<Postcard> postcards = Lob.List.Postcards(limit: 2, offset: 0);
+``` 
+
+Addresses
+-----------
+##### Create an address
+Creates a new address object.
+```csharp
+var Lob = new Lob('<api-key-here>');
+var address = new Address
+{
+    Description = null,
+    Name = "Harry Zhang",
+    Phone = null,
+    Email = null,
+    Company = null,
+    AddressLine1 = "123 Test Street",
+    AddressLine2 = null,
+    AddressCity = "Mountain View",
+    AddressState = "CA",
+    AddressZip = "94041",
+    AddressCountry = "US",
+};
+Address address = Lob.Create.Address(address);
 ```
+
+##### Retrieve an address
+Retrieves the details of an existing address. You need only supply the unique customer identifier that was returned upon address creation.
+```csharp
+var Lob = new Lob('<api-key-here>');
+var id = "psc_5c002b86ce47537a";
+Address address = Lob.Retrieve.Address(id);
+```
+
+##### Delete an address
+Permanently deletes a customer. It cannot be undone.
+```csharp
+var Lob = new Lob('<api-key-here>');
+var id = "psc_5c002b86ce47537a";
+Address address = Lob.Delete.Postcard(id);
+```
+
+##### List all addresses
+Returns a list of your addresses. The addresses are returned sorted by creation date, with the most recently created addresses appearing first.
+```csharp
+var Lob = new Lob('<api-key-here>');
+ModelList<Address> addresses = Lob.List.Addresses(limit: 2, offset: 0);
+``` 

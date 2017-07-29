@@ -25,5 +25,13 @@
             public static string Cancel(string id) => $"{BaseUrl}/postcards/{id}";
             public static string List(int limit, int offset) => $"{BaseUrl}/postcards?limit={limit}&offset={offset}";
         }
+
+        public class Addresses
+        {
+            public const string Create = BaseUrl + "/addresses";
+            public static string Retrieve(string id) => $"{BaseUrl}/addresses/{id}";
+            public static string Cancel(string id) => $"{BaseUrl}/addresses/{id}";
+            public static string List(int limit, int offset) => $"{BaseUrl}/addresses?limit={limit}&offset={offset}";
+        }
     }
 }

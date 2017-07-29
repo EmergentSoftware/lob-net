@@ -31,5 +31,17 @@ namespace Lob.Actions
             var createdPostcard = service.Create(postcard);
             return createdPostcard;
         }
+
+        /// <summary>
+        /// Create a new address
+        /// </summary>
+        /// <param name="address">Address to create</param>
+        /// <returns></returns>
+        public Address Address(Address address)
+        {
+            var service = new AddressService(ApiKey);
+            var createdAddress = service.Create(address);
+            return createdAddress;
+        }
     }
 }

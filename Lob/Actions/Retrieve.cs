@@ -21,5 +21,12 @@ namespace Lob.Actions
             var postcard = service.Retrieve(id);
             return postcard;
         }
+
+        public Address Address(string id)
+        {
+            var service = new AddressService(ApiKey);
+            var address = service.Retrieve(id);
+            return address;
+        }
     }
 }
