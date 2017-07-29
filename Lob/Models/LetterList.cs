@@ -3,10 +3,10 @@ using System.Collections.Generic;
 
 namespace Lob.Models
 {
-    public class LetterList
+    public class ModelList<T>
     {
         [JsonProperty(PropertyName = "data")]
-        public List<Letter> Letters { get; set; }
+        public List<T> Models { get; set; }
 
         [JsonProperty(PropertyName = "count")]
         public int Count { get; set; }

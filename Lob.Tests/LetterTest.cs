@@ -4,7 +4,7 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 namespace Lob.Tests
 {
     [TestClass]
-    public class LettersTest : LobTest
+    public class LetterTest : LobTest
     {
         [TestMethod]
         public void CreateValidLetter()
@@ -21,13 +21,13 @@ namespace Lob.Tests
         [TestMethod]
         public void CancelLetter()
         {
-            LetterCancellation cancellation = Lob.Cancel.Letter(Constants.Letter.Id);
+            Cancellation cancellation = Lob.Cancel.Letter(Constants.Letter.Id);
         }
 
         [TestMethod]
         public void ListLetters()
         {
-            LetterList letters = Lob.List.Letters(limit: 2, offset: 0);
+            ModelList<Letter> letters = Lob.List.Letters(limit: 2, offset: 0);
         }
     }
 }

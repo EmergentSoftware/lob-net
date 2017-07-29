@@ -3,7 +3,7 @@ using Lob.Models;
 
 namespace Lob.Services
 {
-    public class USVerificationService : Service, IUSVerificationService
+    public class USVerificationService : Service, IVerificationService<USVerification, USAddress>
     {
         public USVerificationService(string apiKey)
             : base(apiKey) { }

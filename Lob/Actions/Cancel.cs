@@ -13,10 +13,22 @@ namespace Lob.Actions
         /// </summary>
         /// <param name="id">The identifier of the letter to be canceled.</param>
         /// <returns></returns>
-        public LetterCancellation Letter(string id)
+        public Cancellation Letter(string id)
         {
-            var service = new LettersService(ApiKey);
-            LetterCancellation cancellation = service.Cancel(id);
+            var service = new LetterService(ApiKey);
+            Cancellation cancellation = service.Cancel(id);
+            return cancellation;
+        }
+
+        /// <summary>
+        /// Cancel a postcard
+        /// </summary>
+        /// <param name="id">The identifier of the postcard to be canceled.</param>
+        /// <returns></returns>
+        public Cancellation Postcard(string id)
+        {
+            var service = new PostcardService(ApiKey);
+            Cancellation cancellation = service.Cancel(id);
             return cancellation;
         }
     }

@@ -1,7 +1,6 @@
 ﻿using Lob.Models;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
-using System.Collections.Generic;
 
 namespace Lob.Tests
 {
@@ -10,12 +9,21 @@ namespace Lob.Tests
     {
         public Lob Lob { get; set; }
         public Letter Letter { get; set; }
+        public USAddress USAddress { get; set; }
         public Address Address { get; set; }
         public Postcard Postcard { get; set; }
 
         public LobTest()
         {
             Lob = new Lob(Constants.ApiKey);
+
+            USAddress = new USAddress
+            {
+                PrimaryLine = "185 Berry Street",
+                City = "San Francisco",
+                State = "CA",
+                ZipCode = "94107"
+            };
 
             Address = new Address
             {

@@ -15,7 +15,7 @@ namespace Lob.Actions
         /// <returns></returns>
         public Letter Letter(Letter letter)
         {
-            var service = new LettersService(ApiKey);
+            var service = new LetterService(ApiKey);
             var createdLetter = service.Create(letter);
             return createdLetter;
         }

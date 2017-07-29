@@ -21,6 +21,9 @@
         public class Postcards
         {
             public const string Create = BaseUrl + "/postcards";
+            public static string Retrieve(string id) => $"{BaseUrl}/postcards/{id}";
+            public static string Cancel(string id) => $"{BaseUrl}/postcards/{id}";
+            public static string List(int limit, int offset) => $"{BaseUrl}/postcards?limit={limit}&offset={offset}";
         }
     }
 }

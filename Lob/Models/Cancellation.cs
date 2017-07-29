@@ -2,7 +2,7 @@
 
 namespace Lob.Models
 {
-    public class LetterCancellation
+    public class Cancellation
     {
         [JsonProperty(PropertyName = "id")]
         public string Id { get; set; }

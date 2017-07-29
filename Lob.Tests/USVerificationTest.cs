@@ -9,15 +9,7 @@ namespace Lob.Tests
         [TestMethod]
         public void VerifyValidAddress()
         {
-            var address = new USAddress
-            {
-                PrimaryLine = "185 Berry Street",
-                City = "San Francisco",
-                State = "CA",
-                ZipCode = "94107"
-            };
-
-            USVerification verification = Lob.Verify.USAddress(address);
+            USVerification verification = Lob.Verify.USAddress(USAddress);
         }
     }
 }

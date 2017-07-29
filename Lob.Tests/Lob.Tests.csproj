@@ -56,9 +56,9 @@
   </Choose>
   <ItemGroup>
     <Compile Include="Constants.cs" />
-    <Compile Include="LettersTest.cs" />
+    <Compile Include="LetterTest.cs" />
     <Compile Include="LobTest.cs" />
-    <Compile Include="PostcardsTest.cs" />
+    <Compile Include="PostcardTest.cs" />
     <Compile Include="USVerificationTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

@@ -3,12 +3,12 @@ using Lob.Models;
 
 namespace Lob.Services
 {
-    public class LettersService : Service, ILettersService
+    public class LetterService : Service, IModelService<Letter>
     {
-        public LettersService(string apiKey)
+        public LetterService(string apiKey)
             : base(apiKey) { }
 
-        public LettersService(IApiService apiService)
+        public LetterService(IApiService apiService)
             : base(apiService) { }
 
         public Letter Create(Letter letter)
@@ -23,16 +23,16 @@ namespace Lob.Services
             return ApiService.Get<Letter>(url);
         }
 
-        public LetterCancellation Cancel(string id)
+        public Cancellation Cancel(string id)
         {
             string url = Routes.Letters.Cancel(id);
-            return ApiService.Delete<LetterCancellation>(url);
+            return ApiService.Delete<Cancellation>(url);
         }
 
-        public LetterList List(int limit, int offset)
+        public ModelList<Letter> List(int limit, int offset)
         {
             string url = Routes.Letters.List(limit, offset);
-            return ApiService.Get<LetterList>(url);
+            return ApiService.Get<ModelList<Letter>>(url);
         }
     }
 }

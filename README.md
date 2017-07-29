@@ -95,3 +95,26 @@ var postcard = new Postcard
 };
 Postcard postcard = Lob.Create.Postcard(postcard);
 ```
+
+##### Retrieve a postcard
+Retrieves the postcard with a given ID. You need only supply the unique postcard ID that was returned upon postcard creation.
+```csharp
+var Lob = new Lob('<api-key-here>');
+var id = "psc_5c002b86ce47537a";
+Postcard postcard = Lob.Retrieve.Postcard(id);
+```
+
+##### Cancel a postcard
+Completely removes a postcard from production. This can only be done if the postcard’s send_date has not yet passed. If the postcard is successfully canceled, you will not be charged for it. Read more on postcard cancellation windows and scheduling postcards.
+```csharp
+var Lob = new Lob('<api-key-here>');
+var id = "psc_5c002b86ce47537a";
+Cancellation cancellation = Lob.Cancel.Postcard(id);
+```
+
+##### List all postcards
+Returns a list of postcards. The returned postcards are sorted by creation date, with the most recently created postcards appearing first.
+```csharp
+var Lob = new Lob('<api-key-here>');
+ModelList<Postcard> postcards = Lob.List.Postcards(limit: 2, offset: 0);
+```

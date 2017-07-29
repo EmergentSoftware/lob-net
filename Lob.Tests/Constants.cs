@@ -10,5 +10,10 @@ namespace Lob.Tests
         {
             public const string Id = "ltr_4868c3b754655f90";
         }
+
+        public class Postcard
+        {
+            public const string Id = "psc_5c002b86ce47537a";
+        }
     }
 }
